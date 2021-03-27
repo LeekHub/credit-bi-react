@@ -16,7 +16,7 @@ export default {
         <p style="text-align:left;line-height:18px">
           ${params.seriesName}：<span>${
         Array.isArray(params.value) ? params.value[2].toFixed(2) : params.value.toFixed(2)
-      }万元</span>
+      }亿元</span>
         </p>
       `;
     },

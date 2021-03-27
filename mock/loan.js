@@ -1,14 +1,18 @@
 module.exports = function loan() {
   return {
     overview: {
-      custCount: 14695, // 客户数量
-      loanCount: 19016, // 贷款笔数
-      loanAmt: 63900899.83, // 贷款金额
-      overdueAmt: 2649125.65, // 逾期金额
-      custCountComp: 10.6, // 客户比上月新增百分比
-      loanCountComp: 9.39, // 贷款笔数你上月新增百分比
-      loanAmtComp: 10.03, // 贷款金额比上月新增百分比
-      overdueAmtComp: 0.0, // 逾期金额比上月降低百分比
+      shangzValue: 3418.33, // 上证指数
+      shangzPercent: 1.63,
+      shenzValue: 13769.68, // 深证指数
+      shenzPercent: 2.6,
+      cybValue: 2745.4, // 创业板指数
+      cybPercent: 3.37,
+      hs300Value: 5037.99,
+      hs300Percent: 2.27,
+      zxbValue: 5037.99, // 中小板指数
+      zxbPercent: 2.27,
+      kc50Value: 1256.66, // 科创50指数
+      kc50Percent: 3.03,
     },
     loanStatistical: {
       balance: [

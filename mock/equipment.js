@@ -1,16 +1,6 @@
 module.exports = function equipment() {
   return {
-    equipment: [
-      { name: 'PC', value: 10211 },
-      { name: 'Android', value: 6111 },
-      { name: 'Iphone', value: 7711 },
-      { name: '其他', value: 3711 },
-    ],
-    channel: [
-      { name: '合作方', value: 9400 },
-      { name: '核算', value: 7400 },
-      { name: '自营', value: 5400 },
-      { name: '其它', value: 3400 },
-    ],
+    equipment: [{ name: '上涨', value: 3000 }, { name: '下跌', value: 611 }],
+    channel: [{ name: '涨停', value: 60 }, { name: '跌停', value: 10 }],
   };
 };

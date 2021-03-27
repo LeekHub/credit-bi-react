@@ -67,43 +67,81 @@ export default class index extends PureComponent {
 
     return (
       <div className={styles.topRight}>
-        <Card title="数据总览">
+        <Card title="行情总览">
           <ul className={styles.row}>
             <li>
               <div className={styles.title}>
-                <span>客户数量</span>
+                <span>上证指数</span>
                 <span className={styles.percent}>
                   {' '}
                   [
                   <SvgIcon icon="icon-icon-caret-up" className={styles.caretUpIcon} />
-                  {`${overview.custCountComp}%`}]
+                  {`${overview.shangzPercent}%`}]
                 </span>
               </div>
-              <div className={styles.content}>{overview.custCount}</div>
+              <div className={styles.content}>{overview.shangzValue}</div>
             </li>
             <li>
               <div className={styles.title}>
-                <span>贷款笔数</span>
+                <span>深证指数</span>
                 <span className={styles.percent}>
                   {' '}
                   [
                   <SvgIcon icon="icon-icon-caret-up" className={styles.caretUpIcon} />
-                  {`${overview.loanCountComp}%`}]
+                  {`${overview.shenzPercent}%`}]
                 </span>
               </div>
-              <div className={styles.content}>{overview.loanCount}</div>
+              <div className={styles.content}>{overview.shenzValue}</div>
             </li>
             <li>
               <div className={styles.title}>
-                <span>逾期金额</span>
+                <span>创业板指数</span>
                 <span className={styles.percent}>
                   {' '}
                   [
                   <SvgIcon icon="icon-caret-down" className={styles.caretDownIcon} />
-                  {`${overview.overdueAmtComp}%`}]
+                  {`${overview.cybPercent}%`}]
                 </span>
               </div>
-              <div className={styles.content}>{overview.overdueAmt}</div>
+              <div className={styles.content}>{overview.cybValue}</div>
+            </li>
+          </ul>
+          <ul className={styles.row}>
+            <li>
+              <div className={styles.title}>
+                <span>科创50</span>
+                <span className={styles.percent}>
+                  {' '}
+                  [
+                  <SvgIcon icon="icon-icon-caret-up" className={styles.caretUpIcon} />
+                  {`${overview.kc50Percent}%`}]
+                </span>
+              </div>
+              <div className={styles.content}>{overview.kc50Value}</div>
+            </li>
+            <li>
+              <div className={styles.title}>
+                <span>沪深300</span>
+                <span className={styles.percent}>
+                  {' '}
+                  [
+                  <SvgIcon icon="icon-icon-caret-up" className={styles.caretUpIcon} />
+                  {`${overview.hs300Percent}%`}]
+                </span>
+              </div>
+              <div className={styles.content}>{overview.hs300Value}</div>
+            </li>
+            <li>
+              <div className={styles.title}>
+                <span>中小板指数</span>
+                <span className={styles.percent}>
+                  {' '}
+                  [
+                  <SvgIcon icon="icon-caret-down" className={styles.caretDownIcon} />
+                  {`${overview.zxbPercent}%`}]
+                </span>
+              </div>
+              <div className={styles.content}>{overview.zxbValue}</div>
             </li>
           </ul>
         </Card>

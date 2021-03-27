@@ -53,13 +53,13 @@ export default class index extends PureComponent {
   }
 }
 
-const MAX_LEN = 9;
+// const MAX_LEN = 9;
 
 function toThousands(val) {
   let num = (val || 0).toString();
-  while (num.length < MAX_LEN) {
+  /*  while (num.length < MAX_LEN) {
     num = `0${num}`;
-  }
+  } */
   let result = '';
   while (num.length > 3) {
     result = `,${num.slice(-3)}${result}`;

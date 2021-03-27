@@ -2,6 +2,7 @@ let i = 0;
 const effectScatterSeries = effectScatter();
 
 export function genOverviewMap(cmap, message) {
+  console.log(message);
   const sortData = cmap.sort((a, b) => b.value - a.value);
   const max = (sortData[0] && sortData[0].value.toFixed(2)) || 100;
   const min =
@@ -10,7 +11,7 @@ export function genOverviewMap(cmap, message) {
     ...effectScatterSeries[i],
     data: [
       {
-        ...message,
+        // ...message,
         visualMap: false,
       },
     ],
@@ -114,7 +115,7 @@ export function genOverviewBar(cmap) {
       show: false,
     },
     yAxis: {
-      name: 'Top 10排行（万元）',
+      name: '地域Top 10排行（亿元）',
       nameLocation: 'start',
       nameTextStyle: {
         color: '#ffffff',

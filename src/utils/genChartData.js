@@ -692,7 +692,7 @@ export function genEquipment(data) {
     yCategory.push(`${((item.value / sum) * 100).toFixed(2)}%`);
   });
   return {
-    color: ['#FF8700', '#ffc300', '#00e473', '#009DFF'],
+    color: ['#f44336', '#00e473', 'red', 'green'],
     tooltip: {
       formatter: params => {
         return `
@@ -725,7 +725,7 @@ export function genEquipment(data) {
       itemGap: 10,
       formatter: name => {
         const item = data.find(k => k.name === name);
-        return `{title| ${name}}\n{value| ${item.value} 人}`;
+        return `{title| ${name}}\n{value| ${item.value} 家}`;
       },
       textStyle: {
         rich: {

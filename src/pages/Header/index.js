@@ -25,7 +25,7 @@ const Header = memo(() => {
         <SvgIcon icon="icon-time" className={styles.timeIcon} />
         {moment(time).format(FORMAT)}
       </div>
-      <div className={styles.title}>BI平台实时数据看板</div>
+      <div className={styles.title}>韭菜盒子实时数据看板</div>
       <div className={styles.desc}>
         <SvgIcon icon="icon-shezhi" className={styles.setIcon} />
         统计维度：昨天

@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 import Card from '@/components/Card';
@@ -7,30 +8,30 @@ import { genEquipment } from '@/utils/genChartData';
 import styles from './index.scss';
 
 const legends = {
-  PC: {
-    key: 'PC',
-    label: 'PC',
+  上涨: {
+    key: '上涨',
+    label: '上涨',
     type: 'circle',
-    backgroundColor: '#FF8700',
+    backgroundColor: '#f44336',
   },
-  Android: {
-    key: 'Android',
-    label: 'Android',
-    type: 'circle',
-    backgroundColor: '#ffc300',
-  },
-  Iphone: {
-    key: 'Iphone',
-    label: 'Iphone',
+  下跌: {
+    key: '下跌',
+    label: '下跌',
     type: 'circle',
     backgroundColor: '#00e473',
   },
-  其它: {
-    key: '其它',
-    label: '其它',
+  /*  涨停: {
+    key: '涨停',
+    label: '涨停',
     type: 'circle',
-    backgroundColor: '#009DFF',
+    backgroundColor: 'red',
   },
+  跌停: {
+    key: '跌停',
+    label: '跌停',
+    type: 'circle',
+    backgroundColor: 'green',
+  }, */
 };
 
 @connect(({ loan }) => ({
@@ -43,20 +44,19 @@ export default class index extends PureComponent {
 
     const equipmentData = genEquipment(equipment, legends);
     const channelData = calculate(channel);
-
     return (
-      <Card title="设备渠道" legends={<Labels data={Object.values(legends)} />}>
+      <Card title="涨跌统计" legends={<Labels data={Object.values(legends)} />}>
         <Pie data={equipmentData} style={{ height: 240 }} />
         <div className={styles.channel}>
-          <div className={styles.title}>渠道排行</div>
-          {channelData.map(({ name, percent }) => (
+          <div className={styles.title}>涨停跌停</div>
+          {channelData.map(({ name, percent, value }) => (
             <div className={styles.column} key={name}>
               <div className={styles.label}>{name}</div>
               <div className={styles.bars}>
                 <div className={styles.inner} />
                 <div className={styles.outer} style={{ width: percent }} />
               </div>
-              <div className={styles.num}>{percent}</div>
+              <div className={styles.num}>{value} 家</div>
             </div>
           ))}
         </div>
